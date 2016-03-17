@@ -1,0 +1,14 @@
+﻿
+<select ng-model="controller.selectedGenre"
+        ng-options="genre.name for genre in controller.genres"
+        ng-change="controller.getMovies()">
+</select>
+<!--ul >
+    <li ng-repeat="movie in controller.Movies">{{movie.title}}</li>
+  </ul>-->
+
+<script type="text/ng-template" id="movieListModal.html">
+    <div ng-repeat="movie in modalController.movies">
+        {{movie.title}}
+    </div>
+</script>
